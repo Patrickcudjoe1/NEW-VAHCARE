@@ -373,7 +373,6 @@ nav {
   font-weight: 700;
   letter-spacing: 1px;
   margin-bottom: 20px;
-  color: var(--color-primary);
 }
 
 .section-title {
@@ -394,7 +393,6 @@ nav {
 .section-services {
   padding: 100px 0;
   background-color: #fff;
-  color: var(--color-primary);
 }
 
 .services-grid {
@@ -467,7 +465,6 @@ nav {
 .section-support {
   padding: 100px 0;
   background-color: #f7f7f7;
-  color: var(--color-primary);
 }
 
 .support-grid {
@@ -658,7 +655,6 @@ nav {
 .section-jobs-list {
   padding: 100px 0;
   background: #fdfdfd;
-  color: var(--color-primary);
 }
 
 .jobs-grid {
@@ -786,7 +782,6 @@ nav {
 .section-benefits {
   padding: 120px 0;
   background: #f4f4f4;
-  color: var(--color-primary);
 }
 
 .benefits-grid {
@@ -859,24 +854,12 @@ nav {
 .section-solutions {
   padding: 120px 0;
   background: #fdfdfd;
-  color: var(--color-primary);
 }
 
 .solutions-wrapper {
   display: flex;
   flex-direction: column;
   gap: 80px;
-}
-
-.solution-category-body {
-  margin-bottom: 60px;
-}
-
-.category-title {
-  font-size: 1.5rem;
-  margin-bottom: 30px;
-  color: #444;
-  font-family: var(--font-serif);
 }
 
 .solution-category {
@@ -1052,7 +1035,6 @@ nav {
 .section-recruitment-grid {
   padding: 100px 0;
   background: #f9f9f9;
-  color: var(--color-primary);
 }
 
 .recruitment-grid {
@@ -1081,7 +1063,7 @@ nav {
   width: 60px;
   height: 60px;
   background: var(--color-secondary);
-  color: #000;
+  color: #fff;
   border-radius: 15px;
   display: flex;
   align-items: center;
@@ -1791,4 +1773,4 @@ nav {
 
 .feature-mini-item span {
   font-weight: 500;
-}
+}
