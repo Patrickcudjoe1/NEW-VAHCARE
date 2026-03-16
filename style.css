@@ -1606,3 +1606,171 @@ nav {
     justify-content: center;
   }
 }
+
+/* ==========================================================================
+   Responsive Components & Layout Fixes
+   ========================================================================== */
+
+/* Responsive Process Steps */
+.process-steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .process-steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* For Learning Disability page 5-step process */
+.ld-page .process-steps {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 992px) {
+  .ld-page .process-steps {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.step-card {
+  text-align: center;
+  padding: 20px;
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  background: var(--color-primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.ld-page .step-number {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.step-card h4 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--color-primary);
+}
+
+.step-card p {
+  color: #444;
+}
+
+.ld-page .step-card h5 {
+  margin-bottom: 10px;
+}
+
+.ld-page .step-card p {
+  font-size: 0.8rem;
+}
+
+/* Solution Grid Responsiveness */
+.solutions-detailed-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+@media (min-width: 768px) {
+  .solutions-detailed-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .solutions-detailed-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.detail-card.span-1-5 {
+  grid-column: span 1;
+}
+
+@media (min-width: 1024px) {
+  .detail-card.span-1-5 {
+    grid-column: span 1.5;
+  }
+}
+
+/* Highlight Box (LD Page) */
+.highlight-box {
+  margin-top: 50px;
+  background: var(--color-primary);
+  color: white;
+  padding: 40px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+@media (min-width: 768px) {
+  .highlight-box {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+.highlight-box .service-icon {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+
+.highlight-box h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-family: var(--font-serif);
+}
+
+.highlight-box p {
+  opacity: 1;
+}
+
+/* Features Grid Mini */
+.features-grid-mini {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+@media (min-width: 600px) {
+  .features-grid-mini {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.feature-mini-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.feature-mini-item i {
+  flex-shrink: 0;
+}
+
+.feature-mini-item span {
+  font-weight: 500;
+}
