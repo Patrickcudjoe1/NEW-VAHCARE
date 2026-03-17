@@ -1,0 +1,32 @@
+{
+  "functions": {
+    "api/*.php": {
+      "runtime": "vercel-php@0.7.0"
+    },
+    "*.php": {
+      "runtime": "vercel-php@0.7.0"
+    }
+  },
+  "routes": [
+    {
+      "src": "/(index)?",
+      "dest": "/index.php"
+    },
+    {
+      "src": "/jobs",
+      "dest": "/jobs.php"
+    },
+    {
+      "src": "/recruitment",
+      "dest": "/recruitment.php"
+    },
+    {
+      "src": "/learning-disability",
+      "dest": "/learning-disability.php"
+    },
+    {
+      "src": "/(.*).html",
+      "dest": "/$1.php"
+    }
+  ]
+}
