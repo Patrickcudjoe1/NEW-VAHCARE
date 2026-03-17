@@ -1,32 +1,33 @@
 {
+  "version": 2,
   "functions": {
     "api/*.php": {
-      "runtime": "vercel-php@0.7.0"
+      "runtime": "vercel-php@0.8.0"
     },
     "*.php": {
-      "runtime": "vercel-php@0.7.0"
+      "runtime": "vercel-php@0.8.0"
     }
   },
-  "routes": [
+  "rewrites": [
     {
-      "src": "/(index)?",
-      "dest": "/index.php"
+      "source": "/",
+      "destination": "/index.php"
     },
     {
-      "src": "/jobs",
-      "dest": "/jobs.php"
+      "source": "/index",
+      "destination": "/index.php"
     },
     {
-      "src": "/recruitment",
-      "dest": "/recruitment.php"
+      "source": "/jobs",
+      "destination": "/jobs.php"
     },
     {
-      "src": "/learning-disability",
-      "dest": "/learning-disability.php"
+      "source": "/recruitment",
+      "destination": "/recruitment.php"
     },
     {
-      "src": "/(.*).html",
-      "dest": "/$1.php"
+      "source": "/learning-disability",
+      "destination": "/learning-disability.php"
     }
   ]
 }
