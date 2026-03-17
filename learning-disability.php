@@ -19,7 +19,7 @@
         <div class="container">
             <nav>
                 <div class="logo">
-                    <a href="index.html">
+                    <a href="index.php">
                         <img src="assets/logo.png" alt="VahCare Logo" class="logo-img">
                     </a>
                 </div>
@@ -28,17 +28,17 @@
                     <button class="close-menu" aria-label="Close menu">
                         <i data-lucide="x"></i>
                     </button>
-                    <li><a href="index.html#about">About us <i data-lucide="chevron-down"></i></a></li>
-                    <li><a href="index.html#services">Services</a></li>
-                    <li><a href="learning-disability.html" class="active">Learning Disability Support</a></li>
+                    <li><a href="index.php#about">About us <i data-lucide="chevron-down"></i></a></li>
+                    <li><a href="index.php#services">Services</a></li>
+                    <li><a href="learning-disability.php" class="active">Learning Disability Support</a></li>
                     <li class="nav-item-dropdown">
                         <a href="#">Jobs <i data-lucide="chevron-down"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="jobs.html">Find Jobs</a></li>
-                            <li><a href="recruitment.html">Healthcare Recruitment</a></li>
+                            <li><a href="jobs.php">Find Jobs</a></li>
+                            <li><a href="recruitment.php">Healthcare Recruitment</a></li>
                         </ul>
                     </li>
-                    <li><a href="index.html#register" class="btn-register">Contact Us <i
+                    <li><a href="index.php#register" class="btn-register">Contact Us <i
                                 data-lucide="arrow-right"></i></a></li>
                 </ul>
 
@@ -466,18 +466,18 @@
                 <div class="footer-column">
                     <h4>Quick Links</h4>
                     <ul class="footer-links">
-                        <li><a href="index.html#about">About Us</a></li>
-                        <li><a href="index.html#services">Personal Care</a></li>
-                        <li><a href="index.html#services">Specialized Care</a></li>
-                        <li><a href="learning-disability.html">Learning Disability Support</a></li>
-                        <li><a href="index.html#solution">24/7 Support</a></li>
+                        <li><a href="index.php#about">About Us</a></li>
+                        <li><a href="index.php#services">Personal Care</a></li>
+                        <li><a href="index.php#services">Specialized Care</a></li>
+                        <li><a href="learning-disability.php">Learning Disability Support</a></li>
+                        <li><a href="index.php#solution">24/7 Support</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-column">
                     <h4>Recruitment</h4>
                     <ul class="footer-links">
-                        <li><a href="jobs.html">Find Jobs</a></li>
+                        <li><a href="jobs.php">Find Jobs</a></li>
                     </ul>
                 </div>
 

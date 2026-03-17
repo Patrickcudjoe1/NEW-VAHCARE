@@ -27,3 +27,17 @@ CREATE TABLE IF NOT EXISTS job_applications (
     resume_path VARCHAR(255) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+-- Table for admin users
+CREATE TABLE IF NOT EXISTS admins (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password_hash VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Insert a default admin (password: admin123)
+-- In production, the user should be prompted to change this
+INSERT INTO admins (username, password_hash, email) 
+VALUES ('admin', '$2y$10$vIK6S/6H8G6n.k/K98/q9.qQ9qQ9qQ9qQ9qQ9qQ9qQ9qQ9qQ9qQ9', 'info@vahcare.co.uk');

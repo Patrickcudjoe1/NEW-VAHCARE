@@ -1,8 +1,14 @@
 <?php
 header('Content-Type: application/json');
 require_once '../includes/db.php';
+require_once '../includes/functions.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // CSRF Protection
+    if (!isset($_POST['csrf_token']) || !verify_csrf_token($_POST['csrf_token'])) {
+        echo json_encode(['success' => false, 'message' => 'Invalid CSRF token.']);
+        exit;
+    }
     $first_name = filter_input(INPUT_POST, 'first-name', FILTER_SANITIZE_STRING);
     $last_name = filter_input(INPUT_POST, 'last-name', FILTER_SANITIZE_STRING);
     $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
@@ -37,6 +43,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         try {
             $stmt = $pdo->prepare("INSERT INTO job_applications (first_name, last_name, email, phone, experience, availability, cover_letter, resume_path) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
             $stmt->execute([$first_name, $last_name, $email, $phone, $experience, $availability, $cover_letter, $upload_path]);
+
+            // Send Email Notification
+            $to = ADMIN_EMAIL;
+            $subject = "New Job Application: " . $first_name . " " . $last_name;
+            $body = "Name: $first_name $last_name\nEmail: $email\nPhone: $phone\nExperience: $experience\nAvailability: $availability\n\nCover Letter:\n$cover_letter";
+            $headers = "From: " . $email;
+            
+            @mail($to, $subject, $body, $headers);
 
             echo json_encode(['success' => true, 'message' => 'Your application has been submitted successfully!']);
         } catch (\PDOException $e) {

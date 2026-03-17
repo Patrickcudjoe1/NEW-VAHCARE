@@ -1,13 +1,9 @@
 <?php
-// Database connection configuration
+session_start();
+// Database connection using PDO
+require_once 'config.php';
 
-$host = 'localhost';
-$db   = 'vah_care';
-$user = 'root';
-$pass = ''; // Default for many local environments
-$charset = 'utf8mb4';
-
-$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+$dsn = "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=" . DB_CHARSET;
 $options = [
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
@@ -15,7 +11,7 @@ $options = [
 ];
 
 try {
-    $pdo = new PDO($dsn, $user, $pass, $options);
+    $pdo = new PDO($dsn, DB_USER, DB_PASS, $options);
 } catch (\PDOException $e) {
     // In production, log error and show generic message
     die("Connection failed: " . $e->getMessage());

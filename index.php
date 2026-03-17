@@ -18,7 +18,7 @@
         <div class="container">
             <nav>
                 <div class="logo">
-                    <a href="index.html">
+                    <a href="index.php">
                         <img src="assets/logo.png" alt="VahCare Logo" class="logo-img">
                     </a>
                 </div>
@@ -29,12 +29,12 @@
                     </button>
                     <li><a href="#about">About us <i data-lucide="chevron-down"></i></a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="learning-disability.html">Learning Disability Support</a></li>
+                    <li><a href="learning-disability.php">Learning Disability Support</a></li>
                     <li class="nav-item-dropdown">
                         <a href="#">Jobs <i data-lucide="chevron-down"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="jobs.html">Find Jobs</a></li>
-                            <li><a href="recruitment.html">Healthcare Recruitment</a></li>
+                            <li><a href="jobs.php">Find Jobs</a></li>
+                            <li><a href="recruitment.php">Healthcare Recruitment</a></li>
                         </ul>
                     </li>
                     <li><a href="#register" class="btn-register">Contact Us <i data-lucide="arrow-right"></i></a></li>
@@ -59,7 +59,7 @@
                     <div class="hero-actions animate-fade-up delay-2">
                         <a href="#explore" class="btn-explore">Explore Care services <i
                                 data-lucide="arrow-right"></i></a>
-                        <a href="jobs.html" class="btn-explore">Find Jobs <i data-lucide="arrow-right"></i></a>
+                        <a href="jobs.php" class="btn-explore">Find Jobs <i data-lucide="arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -220,7 +220,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <a href="learning-disability.html" class="btn-learn-more">Discover our comprehensive
+                            <a href="learning-disability.php" class="btn-learn-more">Discover our comprehensive
                                 learning disability support services <i data-lucide="arrow-right"></i></a>
                         </div>
                         <div class="solutions-ld-image">
@@ -291,7 +291,9 @@
                         <p class="form-intro">Fill in our Contact Form below with your details, and we'll get back to
                             you with a personalized response.</p>
 
-                        <form action="#" class="contact-form">
+                        <form action="api/contact_handler.php" method="POST" class="contact-form">
+                            <?php require_once 'includes/functions.php'; ?>
+                            <input type="hidden" name="csrf_token" value="<?php echo generate_csrf_token(); ?>">
                             <div class="form-group">
                                 <label for="first-name">First Name</label>
                                 <input type="text" id="first-name" placeholder="Your first name" required>
@@ -357,7 +359,7 @@
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#services">Personal Care</a></li>
                         <li><a href="#services">Specialized Care</a></li>
-                        <li><a href="learning-disability.html">Learning Disability Support</a></li>
+                        <li><a href="learning-disability.php">Learning Disability Support</a></li>
                         <li><a href="#solution">24/7 Support</a></li>
                     </ul>
                 </div>
@@ -365,7 +367,7 @@
                 <div class="footer-column">
                     <h4>Recruitment</h4>
                     <ul class="footer-links">
-                        <li><a href="jobs.html">Find Jobs</a></li>
+                        <li><a href="jobs.php">Find Jobs</a></li>
                     </ul>
                 </div>
 
