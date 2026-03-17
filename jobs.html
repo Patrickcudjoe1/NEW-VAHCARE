@@ -20,7 +20,7 @@
         <div class="container">
             <nav>
                 <div class="logo">
-                    <a href="index.php">
+                    <a href="index.html">
                         <img src="assets/logo.png" alt="VahCare Logo" class="logo-img">
                     </a>
                 </div>
@@ -29,17 +29,17 @@
                     <button class="close-menu" aria-label="Close menu">
                         <i data-lucide="x"></i>
                     </button>
-                    <li><a href="index.php#about">About us <i data-lucide="chevron-down"></i></a></li>
-                    <li><a href="index.php#services">Services</a></li>
-                    <li><a href="learning-disability.php">Learning Disability Support</a></li>
+                    <li><a href="index.html#about">About us <i data-lucide="chevron-down"></i></a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="learning-disability.html">Learning Disability Support</a></li>
                     <li class="nav-item-dropdown">
                         <a href="#" class="active">Jobs <i data-lucide="chevron-down"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="jobs.php" class="active">Find Jobs</a></li>
-                            <li><a href="recruitment.php">Healthcare Recruitment</a></li>
+                            <li><a href="jobs.html" class="active">Find Jobs</a></li>
+                            <li><a href="recruitment.html">Healthcare Recruitment</a></li>
                         </ul>
                     </li>
-                    <li><a href="index.php#register" class="btn-register">Contact Us <i data-lucide="arrow-right"></i></a></li>
+                    <li><a href="index.html#register" class="btn-register">Contact Us <i data-lucide="arrow-right"></i></a></li>
                 </ul>
 
                 <button class="mobile-nav-toggle" aria-label="Toggle navigation">
@@ -313,8 +313,7 @@
                 <button class="close-modal" aria-label="Close modal">&times;</button>
             </div>
             <form id="job-application-form" class="modal-form" enctype="multipart/form-data">
-                <?php require_once 'includes/functions.php'; ?>
-                <input type="hidden" name="csrf_token" value="<?php echo generate_csrf_token(); ?>">
+                <input type="hidden" name="csrf_token" id="job-csrf" value="">
                 <div class="form-row">
                     <div class="form-group">
                         <label for="modal-first-name">First Name *</label>

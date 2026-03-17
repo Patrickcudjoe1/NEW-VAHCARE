@@ -4,30 +4,14 @@
     "api/*.php": {
       "runtime": "vercel-php@0.8.0"
     },
-    "*.php": {
+    "admin/*.php": {
       "runtime": "vercel-php@0.8.0"
     }
   },
-  "rewrites": [
+  "routes": [
     {
-      "source": "/",
-      "destination": "/index.php"
-    },
-    {
-      "source": "/index",
-      "destination": "/index.php"
-    },
-    {
-      "source": "/jobs",
-      "destination": "/jobs.php"
-    },
-    {
-      "source": "/recruitment",
-      "destination": "/recruitment.php"
-    },
-    {
-      "source": "/learning-disability",
-      "destination": "/learning-disability.php"
+      "src": "/admin",
+      "dest": "/admin/login.php"
     }
   ]
 }

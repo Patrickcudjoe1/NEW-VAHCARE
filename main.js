@@ -1,6 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
   console.log('Agewise Landing Page Initialized');
 
+  // Fetch CSRF Token
+  fetch('api/get_token.php')
+    .then(response => response.json())
+    .then(data => {
+      const contactCsrf = document.getElementById('contact-csrf');
+      const jobCsrf = document.getElementById('job-csrf');
+      if (contactCsrf) contactCsrf.value = data.token;
+      if (jobCsrf) jobCsrf.value = data.token;
+    })
+    .catch(err => console.error('Error fetching CSRF token:', err));
+
   // Intersection Observer for scroll animations
   const observerOptions = {
     threshold: 0.1
