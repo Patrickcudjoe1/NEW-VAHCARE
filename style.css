@@ -1482,21 +1482,6 @@ header.scrolled .btn-register {
   color: #fff;
 }
 
-.footer-legal-links a:hover {
-  text-decoration: underline;
-}
-
-@media (max-width: 1024px) {
-  .footer-top {
-
-/* Responsive Process Steps */
-.process-steps {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
-  position: relative;
-}
-
 @media (min-width: 768px) {
   .process-steps {
     grid-template-columns: repeat(3, 1fr);
