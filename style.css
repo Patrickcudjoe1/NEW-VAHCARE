@@ -1464,37 +1464,6 @@ header.scrolled .btn-register {
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  opacity: 0.85;
-  font-size: 0.9rem;
-}
-
-.footer-legal-links {
-  display: flex;
-  gap: 30px;
-}
-
-.footer-legal-links a {
-  color: #fff;
-}
-
-@media (min-width: 768px) {
-  .process-steps {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* For Learning Disability page 5-step process */
-.ld-page .process-steps {
-  grid-template-columns: 1fr;
-}
-
-@media (min-width: 992px) {
-  .ld-page .process-steps {
     grid-template-columns: repeat(5, 1fr);
   }
 }
