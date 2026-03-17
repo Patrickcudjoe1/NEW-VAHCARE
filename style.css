@@ -56,6 +56,11 @@ img {
   margin: 0 auto;
 }
 
+/* Utilities */
+.text-center {
+  text-align: center;
+}
+
 /* Header & Nav */
 header {
   height: var(--header-height);
@@ -380,14 +385,17 @@ nav {
   font-family: var(--font-serif);
   font-size: 3rem;
   line-height: 1.2;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   color: var(--color-primary);
 }
 
 .section-description {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   color: #555;
-  max-width: 500px;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  text-align: inherit;
+  line-height: 1.6;
 }
 
 /* Services Section */
