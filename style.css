@@ -1488,105 +1488,6 @@ header.scrolled .btn-register {
 
 @media (max-width: 1024px) {
   .footer-top {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-  }
-}
-
-/* Mobile Navigation */
-.close-menu {
-  display: none;
-}
-
-@media (max-width: 1100px) {
-  .close-menu {
-    display: block !important;
-    position: absolute;
-    top: 25px;
-    right: 30px;
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 2.2rem;
-    cursor: pointer;
-    z-index: 10002;
-    padding: 0;
-    transition: transform 0.3s ease;
-  }
-
-  .close-menu:hover {
-    color: var(--color-secondary);
-    transform: rotate(90deg);
-  }
-
-  header {
-    height: 70px !important;
-    background: var(--color-primary) !important;
-    position: fixed !important;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9991;
-    backdrop-filter: blur(15px) !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    color: #ffffff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .nav-active .dropdown-menu {
-    position: static;
-    display: none;
-    background: rgba(255, 255, 255, 0.03);
-    margin-top: 5px;
-    padding: 5px 15px;
-    border-radius: 10px;
-    transform: none;
-    width: 100%;
-    box-shadow: none;
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .nav-item-dropdown.active .dropdown-menu {
-    display: block;
-  }
-
-  .nav-active .btn-register {
-    display: flex !important;
-    width: 100%;
-    background: var(--color-secondary);
-    color: var(--color-primary);
-    justify-content: center;
-    padding: 16px;
-    border-radius: 50px;
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-top: 25px;
-    border: none;
-  }
-}
-
-@media (max-width: 640px) {
-  .footer-top {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-  }
-
-  .footer-legal-links {
-    justify-content: center;
-  }
-}
-
-/* ==========================================================================
-   Responsive Components & Layout Fixes
-   ========================================================================== */
 
 /* Responsive Process Steps */
 .process-steps {
@@ -1977,10 +1878,4 @@ header.scrolled .btn-register {
   transform: translateY(-2px);
 }
 
-@media (max-width: 600px) {
-  .form-row {
-    flex-direction: column;
-    gap: 0;
-  }
-}
 }
