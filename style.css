@@ -64,15 +64,20 @@ img {
 /* Header & Nav */
 header {
   height: var(--header-height);
-  position: sticky;
+  position: fixed; /* Keep fixed for sticky effect */
   top: 0;
   left: 0;
   width: 100%;
   z-index: 9999;
   display: flex;
   align-items: center;
-  background: #f8fafc; /* Light grayish-white background */
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Subtle shadow for depth */
+  transition: all 0.3s ease;
+  background: transparent; /* Initial transparent state */
+}
+
+header.scrolled {
+  background: #f8fafc; /* White background on scroll */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Shadow on scroll */
 }
 
 nav {
@@ -93,26 +98,40 @@ nav {
   display: flex;
   align-items: center;
   gap: 5px;
-  color: var(--color-primary); /* Dark text for light background */
+  color: #fff; /* Initial white for transparency */
+  transition: color 0.3s ease;
+}
+
+header.scrolled .nav-links li a {
+  color: var(--color-primary); /* Dark text on white background */
 }
 
 .nav-links li a.active {
-  color: var(--color-primary);
+  color: #fff;
   font-weight: 700;
-  border-bottom: 2px solid var(--color-primary);
+  border-bottom: 2px solid #fff;
+}
+
+header.scrolled .nav-links li a.active {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
 }
 
 .mobile-nav-toggle {
   display: none !important;
   background: none;
   border: none;
-  color: var(--color-primary); /* Dark toggle for light background */
+  color: #fff; /* Initial toggle color */
   font-size: 2rem;
   cursor: pointer;
   z-index: 1001;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
   padding: 5px;
   position: relative;
+}
+
+header.scrolled .mobile-nav-toggle {
+  color: var(--color-primary); /* Toggle color when scrolled */
 }
 
 .logo {
@@ -121,10 +140,14 @@ nav {
 }
 
 .logo-img {
-  height: 60px;
+  height: 80px; /* Increased from 60px */
   /* Professional size for the logo */
   width: auto;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+header.scrolled .logo-img {
+  height: 60px; /* Shrink logo slightly on scroll for better visibility */
 }
 
 .logo:hover .logo-img {
@@ -180,8 +203,8 @@ nav {
 
 
 .btn-register {
-  border: 2px solid var(--color-primary); /* Visible border on light background */
-  color: var(--color-primary); /* Dark text */
+  border: 2px solid #fff; /* Visible white border */
+  color: #fff;
   padding: 10px 25px;
   border-radius: 50px;
   font-weight: 600;
@@ -191,9 +214,15 @@ nav {
   transition: all 0.3s ease;
 }
 
+header.scrolled .btn-register {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
 .btn-register:hover {
-  background: var(--color-primary);
-  color: #fff;
+  background: var(--color-secondary);
+  color: var(--color-primary);
+  border-color: var(--color-secondary);
 }
 
 /* Hero Section */
@@ -1967,4 +1996,5 @@ nav {
     flex-direction: column;
     gap: 0;
   }
+}
 }

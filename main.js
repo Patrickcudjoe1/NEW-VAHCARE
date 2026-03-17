@@ -217,4 +217,15 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   }
+
+  // Header Scroll Effect
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  };
+  window.addEventListener('scroll', handleScroll);
+  handleScroll(); // Initial check
 });
