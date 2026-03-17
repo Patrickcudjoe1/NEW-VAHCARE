@@ -1452,33 +1452,6 @@ header.scrolled .btn-register {
 .footer-contact-info li {
   display: flex;
   gap: 15px;
-  margin-bottom: 20px;
-  opacity: 0.95;
-  font-size: 0.95rem;
-}
-
-.footer-contact-info i {
-  color: var(--color-secondary);
-  flex-shrink: 0;
-  margin-top: 5px;
-}
-
-.footer-bottom {
-    grid-template-columns: repeat(5, 1fr);
-  }
-}
-
-.step-card {
-  text-align: center;
-  padding: 20px;
-}
-
-.step-number {
-  width: 60px;
-  height: 60px;
-  background: var(--color-primary);
-  color: white;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1832,4 +1805,9 @@ header.scrolled .btn-register {
   transform: translateY(-2px);
 }
 
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
 }
