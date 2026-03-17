@@ -12,6 +12,8 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap"
         rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Preload Hero Image -->
+    <link rel="preload" as="image" href="assets/hero-bg.png" fetchpriority="high">
 </head>
 
 <body>
@@ -20,7 +22,7 @@
             <nav>
                 <div class="logo">
                     <a href="index.html">
-                        <img src="assets/logo.png" alt="VahCare Logo" class="logo-img">
+                        <img src="assets/logo.png" alt="VahCare Logo" class="logo-img" width="640" height="640" decoding="async">
                     </a>
                 </div>
 
@@ -308,7 +310,7 @@
         <div class="container">
             <div class="footer-top">
                 <div class="footer-column footer-brand">
-                    <img src="assets/logo.png" alt="VAH Care Logo" class="footer-logo">
+                    <img src="assets/logo.png" alt="VAH Care Logo" class="footer-logo" width="640" height="640" loading="lazy" decoding="async">
                     <p>Transforming lives through compassionate care and unmatched recruitment expertise.</p>
                     <div class="footer-socials">
                         <a href="#"><i data-lucide="facebook"></i></a>

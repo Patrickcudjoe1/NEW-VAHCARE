@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="style.css">
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Preload Hero Image -->
+    <link rel="preload" as="image" href="assets/hero-bg.png" fetchpriority="high">
 </head>
 
 <body>
@@ -18,7 +20,7 @@
             <nav>
                 <div class="logo">
                     <a href="index.html">
-                        <img src="assets/logo.png" alt="VahCare Logo" class="logo-img">
+                        <img src="assets/logo.png" alt="VahCare Logo" class="logo-img" width="640" height="640" decoding="async">
                     </a>
                 </div>
 
@@ -68,7 +70,7 @@
             <div class="container">
                 <div class="about-grid">
                     <div class="about-image-wrapper scroll-animate">
-                        <img src="assets/about-family.png" alt="Happy family reading together" class="about-image">
+                        <img src="assets/about-family.png" alt="Happy family reading together" class="about-image" width="640" height="640" loading="lazy" decoding="async">
                     </div>
                     <div class="about-text-content scroll-animate delay-1">
                         <span class="badge">ABOUT</span>
@@ -223,7 +225,7 @@
                                 learning disability support services <i data-lucide="arrow-right"></i></a>
                         </div>
                         <div class="solutions-ld-image">
-                            <img src="assets/ld-adult.png" alt="Learning Disability Support">
+                            <img src="assets/ld-adult.png" alt="Learning Disability Support" width="640" height="640" loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -311,11 +313,11 @@
                                 <label for="service-interest">Service Interest</label>
                                 <select id="service-interest" required>
                                     <option value="" disabled selected>Select a service</option>
-                                    <option value="personal-care">Personal & Home Care</option>
-                                    <option value="specialised-care">Specialised Care Programs</option>
-                                    <option value="learning-disability">Learning Disability Support</option>
-                                    <option value="recruitment">Recruitment Services</option>
-                                    <option value="other">Other</option>
+                                    <option value="personal-care">Care services</option>
+                                    <!-- <option value="specialised-care">SPECIALISED CARE PROGRAMS</option> -->
+                                    <option value="learning-disability">Learning disability support</option>
+                                    <option value="recruitment">Recruitment services</option>
+                                    <!-- <option value="other">Other</option> -->
                                 </select>
                             </div>
                             <div class="form-group full-width">
@@ -340,7 +342,7 @@
         <div class="container">
             <div class="footer-top">
                 <div class="footer-column footer-brand">
-                    <img src="assets/logo.png" alt="VAH Care Logo" class="footer-logo">
+                    <img src="assets/logo.png" alt="VAH Care Logo" class="footer-logo" width="640" height="640" loading="lazy" decoding="async">
                     <p>Transforming lives through compassionate care and unmatched recruitment expertise.</p>
                     <div class="footer-socials">
                         <a href="#"><i data-lucide="facebook"></i></a>
