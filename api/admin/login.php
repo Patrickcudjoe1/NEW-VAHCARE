@@ -1,6 +1,6 @@
 <?php
-require_once '../includes/db.php';
-require_once '../includes/functions.php';
+require_once '../../includes/db.php';
+require_once '../../includes/functions.php';
 
 start_secure_session();
 
@@ -39,13 +39,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Login - VAH Care</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="admin-style.css">
 </head>
 <body class="admin-login-page">
     <div class="login-container">
         <div class="login-box animate-fade-up">
-            <img src="../assets/logo.png" alt="VAH Care Logo" class="login-logo">
+            <img src="../../assets/logo.png" alt="VAH Care Logo" class="login-logo">
             <h2>Admin Login</h2>
             <?php if ($error): ?>
                 <div class="error-message"><?php echo $error; ?></div>
@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
                 <button type="submit" class="btn-login">Login</button>
             </form>
-            <p class="back-link"><a href="../index.php">&larr; Back to Website</a></p>
+            <p class="back-link"><a href="../../index.html">&larr; Back to Website</a></p>
         </div>
     </div>
 </body>

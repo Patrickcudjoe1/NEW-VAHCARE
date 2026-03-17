@@ -1,6 +1,6 @@
 <?php
-require_once '../includes/db.php';
-require_once '../includes/functions.php';
+require_once '../../includes/db.php';
+require_once '../../includes/functions.php';
 
 redirect_if_not_admin();
 
@@ -18,7 +18,7 @@ $applications = $stmt->fetchAll();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard - VAH Care</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="admin-style.css">
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -27,7 +27,7 @@ $applications = $stmt->fetchAll();
     <header class="admin-header">
         <div class="container">
             <div class="admin-nav">
-                <img src="../assets/logo.png" alt="VAH Care Logo" class="admin-logo">
+                <img src="../../assets/logo.png" alt="VAH Care Logo" class="admin-logo">
                 <div class="admin-user-info">
                     <span>Welcome, <strong><?php echo htmlspecialchars($_SESSION['admin_username']); ?></strong></span>
                     <a href="logout.php" class="btn-logout">Logout <i data-lucide="log-out"></i></a>
@@ -107,7 +107,7 @@ $applications = $stmt->fetchAll();
                                 Avail: <?php echo htmlspecialchars($row['availability']); ?>
                             </td>
                             <td>
-                                <a href="<?php echo htmlspecialchars($row['resume_path']); ?>" target="_blank" class="btn-view-resume">
+                                <a href="../<?php echo htmlspecialchars($row['resume_path']); ?>" target="_blank" class="btn-view-resume">
                                     <i data-lucide="file-text"></i> View Resume
                                 </a>
                             </td>
