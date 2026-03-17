@@ -85,4 +85,61 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // Job Application Modal Logic
+  const jobModal = document.getElementById('job-modal');
+  const applyButtons = document.querySelectorAll('.btn-apply');
+  const closeModalBtn = document.querySelector('.close-modal');
+  const cancelBtn = document.querySelector('.btn-cancel');
+  const jobForm = document.getElementById('job-application-form');
+
+  if (jobModal) {
+    const openModal = () => {
+      jobModal.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Prevent scroll
+    };
+
+    const closeModal = () => {
+      jobModal.classList.remove('active');
+      document.body.style.overflow = ''; // Restore scroll
+    };
+
+    applyButtons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openModal();
+      });
+    });
+
+    if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+    if (cancelBtn) cancelBtn.addEventListener('click', closeModal);
+
+    // Close on outside click
+    window.addEventListener('click', (e) => {
+      if (e.target === jobModal) {
+        closeModal();
+      }
+    });
+
+    // Form Submission
+    if (jobForm) {
+      jobForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const submitBtn = jobForm.querySelector('.btn-submit');
+        const originalText = submitBtn.innerText;
+        
+        submitBtn.innerText = 'Submitting...';
+        submitBtn.disabled = true;
+
+        // Simulate API call
+        setTimeout(() => {
+          alert('Thank you for your application! Our recruitment team will review your details and get back to you soon.');
+          jobForm.reset();
+          submitBtn.innerText = originalText;
+          submitBtn.disabled = false;
+          closeModal();
+        }, 1500);
+      });
+    }
+  }
 });
