@@ -1528,20 +1528,6 @@ header.scrolled .btn-register {
     width: 100%;
     z-index: 9991;
     backdrop-filter: blur(15px) !important;
-    -webkit-backdrop-filter: blur(15px) !important;
-    display: flex !important;
-    align-items: center;
-  }
-
-  header .container {
-  .nav-links li {
-    width: 100%;
-  }
-
-  .nav-active .nav-links a {
-    width: 100%;
-    padding: 15px 0;
-    font-size: 1.2rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     color: #ffffff;
     display: flex;
