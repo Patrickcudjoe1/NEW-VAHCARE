@@ -85,6 +85,54 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+  // Contact Form Submission
+  const contactForm = document.querySelector('.contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const submitBtn = contactForm.querySelector('.btn-submit');
+      const originalText = submitBtn.innerHTML;
+      
+      submitBtn.innerHTML = 'Sending... <i data-lucide="loader"></i>';
+      submitBtn.disabled = true;
+      lucide.createIcons();
+
+      const formData = new FormData(contactForm);
+      // Manually add values if inputs don't have 'name' attributes
+      if (!formData.has('name')) {
+        const firstName = document.getElementById('first-name').value;
+        const lastName = document.getElementById('last-name').value;
+        formData.append('name', `${firstName} ${lastName}`);
+        formData.append('email', document.getElementById('email').value);
+        formData.append('phone', document.getElementById('phone').value);
+        formData.append('service', document.getElementById('service-interest').value);
+        formData.append('message', document.getElementById('message').value);
+      }
+
+      fetch('api/contact_handler.php', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          alert(data.message);
+          contactForm.reset();
+        } else {
+          alert('Error: ' + data.message);
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred. Please try again later.');
+      })
+      .finally(() => {
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+        lucide.createIcons();
+      });
+    });
+  }
 
   // Job Application Modal Logic
   const jobModal = document.getElementById('job-modal');
@@ -131,14 +179,30 @@ document.addEventListener('DOMContentLoaded', () => {
         submitBtn.innerText = 'Submitting...';
         submitBtn.disabled = true;
 
-        // Simulate API call
-        setTimeout(() => {
-          alert('Thank you for your application! Our recruitment team will review your details and get back to you soon.');
-          jobForm.reset();
+        const formData = new FormData(jobForm);
+
+        fetch('api/apply_handler.php', {
+          method: 'POST',
+          body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+          if (data.success) {
+            alert(data.message);
+            jobForm.reset();
+            closeModal();
+          } else {
+            alert('Error: ' + data.message);
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          alert('An error occurred. Please try again later.');
+        })
+        .finally(() => {
           submitBtn.innerText = originalText;
           submitBtn.disabled = false;
-          closeModal();
-        }, 1500);
+        });
       });
     }
   }
