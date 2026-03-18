@@ -1108,9 +1108,11 @@ header.scrolled .logo-img {
 
 .solutions-ld-highlight {
   background: var(--color-primary);
-  border-radius: 30px;
-  padding: 60px;
+  padding: 100px 0;
   color: #fff;
+}
+
+.solutions-ld-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
@@ -1183,8 +1185,12 @@ header.scrolled .logo-img {
   }
 
   .solutions-ld-highlight {
+    padding: 80px 0;
+  }
+
+  .solutions-ld-grid {
     grid-template-columns: 1fr;
-    padding: 40px 30px;
+    gap: 40px;
   }
 }
 
