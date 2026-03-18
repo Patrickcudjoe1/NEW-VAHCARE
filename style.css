@@ -715,11 +715,11 @@ header.scrolled .logo-img {
 
 /* Jobs Page Styles */
 .jobs-hero {
-  background-color: #2563eb;
+  background-color: var(--color-primary);
   background-image: 
-    linear-gradient(rgba(37, 99, 235, 0.8), rgba(37, 99, 235, 0.8)),
-    linear-gradient(#ffffff1a 1px, transparent 1px),
-    linear-gradient(90deg, #ffffff1a 1px, transparent 1px);
+    linear-gradient(rgba(0, 49, 82, 0.8), rgba(0, 49, 82, 0.8)),
+    linear-gradient(rgba(173, 223, 241, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(173, 223, 241, 0.1) 1px, transparent 1px);
   background-size: cover, 40px 40px, 40px 40px;
   background-position: center;
   padding: 140px 0 100px;
@@ -728,6 +728,7 @@ header.scrolled .logo-img {
 }
 
 .jobs-hero h1 {
+  font-family: var(--font-serif);
   font-size: 3.5rem;
   margin-bottom: 25px;
   font-weight: 800;
@@ -819,7 +820,7 @@ header.scrolled .logo-img {
   padding: 50px 40px;
   border-radius: 12px;
   border: 1px solid #e5e7eb;
-  border-top: 5px solid #3b82f6; /* Blue top border */
+  border-top: 5px solid var(--color-primary); /* Navy top border */
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
   display: flex;
@@ -834,8 +835,8 @@ header.scrolled .logo-img {
 }
 
 .brand-badge {
-  background: #3b82f6;
-  color: #fff;
+  background: var(--color-secondary); /* Soft Blue badge */
+  color: var(--color-primary); /* Navy text */
   padding: 6px 20px;
   border-radius: 50px;
   font-size: 0.8rem;
