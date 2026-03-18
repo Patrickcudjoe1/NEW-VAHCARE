@@ -221,6 +221,7 @@ header.scrolled .logo-img {
 @media (max-width: 1100px) {
   .mobile-nav-toggle {
     display: flex !important;
+    color: #fff !important; /* Force white color even on scroll */
   }
 
   .close-menu {
@@ -272,7 +273,44 @@ header.scrolled .logo-img {
     font-weight: 600;
     width: 100%;
     padding: 10px 0;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-links li a.active::after {
+    left: 0;
+    transform: none;
+    bottom: 5px;
+    width: 4px;
+    height: 4px;
+  }
+
+  /* Fix dropdown on mobile to prevent overlap */
+  .dropdown-menu {
+    position: static !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    box-shadow: none !important;
+    padding: 10px 0 10px 20px !important;
+    background: transparent !important;
+    display: none; /* Initially hidden, can be toggled by JS if needed, but for now let's make it flow */
+  }
+
+  .nav-item-dropdown:hover .dropdown-menu,
+  .nav-item-dropdown.active .dropdown-menu {
+    display: block !important;
+  }
+
+  .dropdown-menu li {
+    margin: 5px 0 !important;
+  }
+
+  .dropdown-menu li a {
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    opacity: 0.9;
   }
 
   .logo-img {
