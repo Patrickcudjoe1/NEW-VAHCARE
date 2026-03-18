@@ -143,9 +143,7 @@ header.scrolled .nav-links li a {
   position: relative;
 }
 
-header.scrolled .mobile-nav-toggle {
-  color: var(--color-primary); /* Toggle color when scrolled */
-}
+
 
 .logo {
   display: flex;
@@ -169,22 +167,7 @@ header.scrolled .logo-img {
   transform: scale(1.05);
 }
 
-.btn-consultation {
-  background: #ffffff;
-  color: #003152;
-  padding: 10px 25px;
-  border-radius: 50px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
-  white-space: nowrap;
-}
 
-.btn-consultation:hover {
-  background: var(--color-secondary);
-  color: #003152;
-  transform: translateY(-2px);
-}
 
 .nav-cta {
   display: none !important;
