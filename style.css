@@ -206,29 +206,6 @@ header.scrolled .logo-img {
 }
 
 
-.btn-register {
-  border: 2px solid #fff; /* Visible white border */
-  color: #fff;
-  padding: 10px 25px;
-  border-radius: 50px;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  transition: all 0.3s ease;
-}
-
-header.scrolled .btn-register {
-  border-color: var(--color-primary);
-  color: var(--color-primary);
-}
-
-.btn-register:hover {
-  background: var(--color-secondary);
-  color: var(--color-primary);
-  border-color: var(--color-secondary);
-}
-
 /* Mobile Navigation */
 @media (max-width: 1100px) {
   .mobile-nav-toggle {
