@@ -143,15 +143,15 @@ header.scrolled .mobile-nav-toggle {
 
 .logo-img {
   height: auto;
-  max-height: 50px; /* Constrain height */
+  max-height: 65px; /* Increased from 50px */
   width: auto;
-  max-width: 180px; /* Constrain width to prevent overlap */
+  max-width: 200px; /* Increased from 180px */
   object-fit: contain;
   transition: all 0.3s ease;
 }
 
 header.scrolled .logo-img {
-  max-height: 40px;
+  max-height: 50px; /* Increased from 40px */
 }
 
 .logo:hover .logo-img {
@@ -288,7 +288,7 @@ header.scrolled .btn-register {
   }
 
   .logo-img {
-    max-height: 45px;
+    max-height: 55px; /* Adjusting for mobile toggle */
   }
 }
 
@@ -1434,6 +1434,19 @@ header.scrolled .btn-register {
 
   .contact-info-column h2 {
     font-size: 2.2rem;
+  }
+
+  /* Footer Mobile Fix */
+  .footer-top {
+    grid-template-columns: 1fr !important;
+    gap: 40px;
+    text-align: left; /* Keep left aligned for consistency with your image */
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
   }
 }
 
