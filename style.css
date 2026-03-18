@@ -436,9 +436,7 @@ header.scrolled .btn-register {
 
 @media (max-width: 768px) {
 
-  .nav-links {
-    /* Side-drawer logic handles this */
-  }
+  /* Side-drawer logic handles this */
 
   .hero h1 {
     font-size: 3rem;
