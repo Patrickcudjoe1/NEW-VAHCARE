@@ -210,13 +210,40 @@
 .btn-view-resume {
   background: var(--color-primary);
   color: #fff;
-  padding: 8px 15px;
+  padding: 8px 12px;
   border-radius: 8px;
   text-decoration: none;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   display: inline-flex;
   align-items: center;
   gap: 5px;
+  transition: opacity 0.2s;
+}
+
+.btn-view-resume:hover {
+  opacity: 0.9;
+}
+
+.btn-delete {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.btn-delete:hover {
+  background: #fecaca;
+}
+
+.btn-delete i {
+  width: 18px;
+  height: 18px;
 }
 
 .row-cover-letter {
@@ -224,4 +251,5 @@
   font-size: 0.85rem;
   color: #555;
   border-bottom: 2px solid #edf2f7 !important;
+  padding: 20px 30px !important;
 }

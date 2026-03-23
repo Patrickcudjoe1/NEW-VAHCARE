@@ -1981,7 +1981,49 @@ header.scrolled .logo-img {
   transition: transform 0.2s, background 0.2s;
 }
 
-.modal-form .btn-submit:hover {
-  background: #004d80;
-  transform: translateY(-2px);
+/* Full-Width CTA Section */
+.section-cta-full {
+  background-color: var(--color-primary);
+  padding: 100px 0;
+  text-align: center;
+}
+
+.cta-banner-full {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-banner-full .section-title {
+  color: #fff;
+  margin-bottom: 24px;
+}
+
+.cta-banner-full .section-description {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 48px;
+  font-size: 1.1rem;
+}
+
+.cta-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-register.secondary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.btn-register.secondary:hover {
+  background: #fff;
+  color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  .section-cta-full {
+    padding: 60px 0;
+  }
 }
