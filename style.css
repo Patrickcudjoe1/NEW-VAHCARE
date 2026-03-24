@@ -1550,24 +1550,34 @@ header.scrolled .logo-img {
 .footer-socials {
   display: flex;
   gap: 15px;
+  margin-top: 10px;
 }
 
 .footer-socials a {
-  width: 40px;
-  height: 40px;
-  background: rgba(255, 255, 255, 0.1);
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.08);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-socials a:hover {
   background: var(--color-secondary);
-  color: #000;
-  transform: translateY(-3px);
+  color: var(--color-primary);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-color: var(--color-secondary);
+}
+
+.footer-socials a i {
+  width: 20px;
+  height: 20px;
 }
 
 .footer-column h4 {
@@ -1981,46 +1991,6 @@ header.scrolled .logo-img {
   transition: transform 0.2s, background 0.2s;
 }
 
-/* Full-Width CTA Section */
-.section-cta-full {
-  background-color: var(--color-primary);
-  padding: 100px 0;
-  text-align: center;
-}
-
-.cta-banner-full {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.cta-banner-full .section-title {
-  color: #fff;
-  margin-bottom: 24px;
-}
-
-.cta-banner-full .section-description {
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 48px;
-  font-size: 1.1rem;
-}
-
-.cta-actions {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.btn-register.secondary {
-  background: transparent;
-  color: #fff;
-  border: 2px solid #fff;
-}
-
-.btn-register.secondary:hover {
-  background: #fff;
-  color: var(--color-primary);
-}
 
 @media (max-width: 768px) {
   .section-cta-full {
